@@ -1,8 +1,0 @@
-# Environment File
-.env
-
-# bash command 
-.sh
-
-FileClient.py
-FileServer.py
