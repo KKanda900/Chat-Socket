@@ -13,10 +13,11 @@ def encode(message):
     return {"message": message, "message_header": message_header}
 
 def Main():
+    host_name = '127.0.0.1'
     my_username = input("Username: ")
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect((socket.gethostname(), 1234))
+    client_socket.connect((host_name, 1234))
     client_socket.setblocking(False)
     username = my_username.encode('utf-8')
     username_header = f"{len(username):<{HEADER_LENGTH}}".encode('utf-8')
